@@ -2,6 +2,8 @@
 
 **Never let AI-launched background processes die silently again.**
 
+[🇨🇳 中文文档](./README_CN.md)
+
 A managed process framework for AI coding agents — [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Clawdbot](https://github.com/clawdbot/clawdbot), [OpenClaw](https://openclaw.com), or any agent that launches background processes. Handles detached execution, PID tracking, auto-restart on failure, and proactive health alerts.
 
 ## The Problem
