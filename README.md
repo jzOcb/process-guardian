@@ -2,7 +2,7 @@
 
 **Never let AI-launched background processes die silently again.**
 
-A managed process framework for [Clawdbot](https://github.com/clawdbot/clawdbot) / [OpenClaw](https://openclaw.com) agents. Handles detached execution, PID tracking, auto-restart on failure, and proactive health alerts.
+A managed process framework for AI coding agents — [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Clawdbot](https://github.com/clawdbot/clawdbot), [OpenClaw](https://openclaw.com), or any agent that launches background processes. Handles detached execution, PID tracking, auto-restart on failure, and proactive health alerts.
 
 ## The Problem
 
@@ -43,17 +43,30 @@ bash scripts/managed-process.sh status
 
 ## Install
 
-### As a Clawdbot Skill
+### Claude Code
+
+Clone into your project — Claude Code reads `CLAUDE.md` automatically:
 
 ```bash
-# Copy to your skills directory
-cp -r process-guardian /path/to/clawd/skills/
+git clone https://github.com/jzOcb/process-guardian.git
+cd process-guardian
+bash scripts/install.sh
+```
 
-# Run install
+Claude Code will follow the rules in `CLAUDE.md` and use the managed-process framework for any background processes.
+
+### Clawdbot / OpenClaw
+
+Copy to your skills directory — agent reads `SKILL.md` automatically:
+
+```bash
+cp -r process-guardian /path/to/clawd/skills/
 bash skills/process-guardian/scripts/install.sh
 ```
 
 ### Standalone
+
+Works with any setup that has bash + cron:
 
 ```bash
 git clone https://github.com/jzOcb/process-guardian.git
